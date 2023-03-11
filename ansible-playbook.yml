@@ -4,9 +4,12 @@
   connection : ssh
   tasks : 
   - name: updating apt
-    command : "apt-get update && rm -rf /var/lib/dpkg/lock*"
-
-  - name : Install Docker
+    command : "rm -rf /var/lib/dpkg/lock*"
+    
+  - name: updating apt
+    command : "apt-get update"
+    
+- name : Install Docker
     command : apt-get install -y docker.io
 
   - name : Start Docker Service
