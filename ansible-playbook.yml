@@ -4,15 +4,15 @@
   connection : ssh
   tasks : 
   - name: updating apt
-    command : apt update
+    command : sudo apt update
 
   - name : Install Docker
-    command : apt install -y docker.io
+    command : sudo apt install -y docker.io
     become : yes
     become_user : root
 
   - name : Start Docker Service
-    command : systemctl start docker
+    command : sudo systemctl start docker
     become : yes
     become_user : root
 
