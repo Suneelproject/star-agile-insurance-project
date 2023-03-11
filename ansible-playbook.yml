@@ -9,7 +9,7 @@
   - name: updating apt
     command : "apt-get update"
     
-- name : Install Docker
+  - name : Install Docker
     command : apt-get install -y docker.io
 
   - name : Start Docker Service
